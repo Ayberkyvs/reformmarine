@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(./assets/fonts/proximanova_regular.ttf) format('ttf');
+  }
+  @font-face {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(./assets/fonts/proximanova_bold.otf) format('otf');
+  }
+}
+
+html {
+  font-family: "Proxima Nova", system-ui, sans-serif;
+}
+
 * {
   margin: 0px;
   padding: 0px;

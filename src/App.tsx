@@ -8,6 +8,7 @@ import { Suspense } from 'react';
 import MainLayout from "./layouts/MainLayout"
 import Countdown from './components/Countdown';
 import { Home } from 'lucide-react';
+import { ConfigProvider } from 'antd';
 
 const startTime = '2024-07-01T15:27:00'; // Başlangıç tarihi
 const endTime = '2024-08-05T15:27:00';
@@ -36,7 +37,22 @@ export default function App() {
   ]);
   return (
     <Suspense fallback={<h1>Loading..</h1>}> 
-      <RouterProvider router={router} future={{ v7_startTransition: true }}/>
+      <ConfigProvider 
+      theme={{
+        token: {
+          colorPrimary: '#005197',
+          colorPrimaryBg: '#E5F3FF',
+          colorLink: '#0089FF',
+          colorError: "#E71818",
+          colorInfo: "#0089FF",
+          colorSuccess: "#2BD46F",
+          colorTextBase: "#000",
+          colorWarning: "#E69319",
+        },
+      }}
+      >
+        <RouterProvider router={router} future={{ v7_startTransition: true }}/>
+      </ConfigProvider>
     </Suspense>
   );
 }

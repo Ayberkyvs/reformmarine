@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
 import FloatingButtonMenu from "../components/FloatingButtonMenu";
+import Hide from "../components/Hide";
 
 export default function MainLayout() {
   return (
@@ -8,7 +9,9 @@ export default function MainLayout() {
       <Header />
       <main>
         <Outlet />
-        <FloatingButtonMenu />
+        <Hide>
+          <FloatingButtonMenu />
+        </Hide>
       </main>
     </>
   )

@@ -11,7 +11,7 @@ import DrawerComponent from "./Menu/Drawer";;
 interface Menu {
   label: string;
   isDropdown: boolean;
-  href: string;
+  href?: string | undefined | null;
   items?: AntdMenuProps["items"];
 }
 
@@ -26,7 +26,6 @@ const menu: Menu[] = [
   {
     label: "About Us",
     isDropdown: true,
-    href: "/aboutus",
     items: [
       {
         key: '1',
@@ -49,7 +48,6 @@ const menu: Menu[] = [
   {
     label: "Services",
     isDropdown: true,
-    href: "/services",
     items: [
       {
         key: '1',
@@ -99,23 +97,23 @@ const MenuComponent = ({ className, menu }: { className?: string, menu: Menu[] }
       {menu.map((menuItem, index) => {
         if (menuItem.isDropdown) {
           return (
-            <Link key={index} to={menuItem.href}>
-                <Dropdown menu={{ items: menuItem.items }} arrow>
-                    <a onClick={(e) => e.preventDefault()}>
-                        <Space className="flex justify-center items-center">
-                            {menuItem.label}
-                            <FaAngleDown />
-                        </Space>
-                    </a>
-                </Dropdown>
-            </Link>
+            <Dropdown menu={{ items: menuItem.items }} arrow>
+                <a onClick={(e) => e.preventDefault()}>
+                    <Space className="flex justify-center items-center">
+                        {menuItem.label}
+                        <FaAngleDown />
+                    </Space>
+                </a>
+            </Dropdown>
           );
         } else {
-          return (
+          if (menuItem.href != null && menuItem.href != undefined) {
+            return (
             <Link key={index} to={menuItem.href}>
               {menuItem.label}
             </Link>
-          );
+            );
+          }
         }
       })}
     </div>
@@ -181,18 +179,18 @@ export default function Header() {
                     <Show>
                       <div className="flex justify-center items-center gap-10">
                         <MenuComponent menu={menu} className="flex gap-10 uppercase font-bold text-white" />
-                        <Button className="w-[130px] h-[40px] text-base uppercase bg-primary text-white font-bold border-0">Get A Quote</Button>
+                        <Button className="w-[130px] h-[40px] text-base uppercase text-white font-bold border-0" type="primary">Get A Quote</Button>
                       </div>
                     </Show>
                     <Hide>
                         <DrawerComponent btnTitle={<IoMdMenu className="w-7 h-7"/>} btnType="link" btnClassName="text-white">
                         <Menu
-                          className="w-full"
                           defaultSelectedKeys={['1']}
                           defaultOpenKeys={['menu1']}
                           mode="inline"
                           items={items}
                         />
+                        <Button className="max-w-[330px] w-full h-[40px] text-base uppercase text-white font-bold" type="primary">Get A Quote</Button>
                         </DrawerComponent>
                     </Hide>
                 </div>

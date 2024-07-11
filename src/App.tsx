@@ -7,6 +7,7 @@ import {
 import { Suspense } from 'react';
 import MainLayout from "./layouts/MainLayout"
 import Countdown from './components/Countdown';
+import { Home } from 'lucide-react';
 
 const startTime = '2024-07-01T15:27:00'; // Başlangıç tarihi
 const endTime = '2024-08-05T15:27:00';
@@ -21,6 +22,10 @@ export default function App() {
           path: "/",
           element: <Countdown startTime={startTime} endTime={endTime}><h1>asdasd</h1></Countdown>,
         },
+        {
+          path: "/home",
+          element: <Home />
+        }
       ]
       // errorElement: <ErrorBoundary />,
     },

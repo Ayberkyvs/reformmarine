@@ -1,5 +1,10 @@
+
 export default function Home() {
   return (
-    <div>Home</div>
+    <section>
+      <div className={`home w-full h-screen`}>
+        asasdasdadsadasdasd
+      </div>  
+    </section>
   )
-}
+} 

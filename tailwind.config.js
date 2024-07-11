@@ -7,6 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        "white-light": "#F7F8FA",
         'primary': '#005197',
           'blue': {
             50: "#E5F3FF",
@@ -56,7 +57,7 @@ export default {
             800: "#11552D",
             900: "#092A16"
           }
-        }
+      },
     },
   },
   plugins: [],

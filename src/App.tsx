@@ -7,8 +7,8 @@ import {
 import { Suspense } from 'react';
 import MainLayout from "./layouts/MainLayout"
 import Countdown from './components/Countdown';
-import { Home } from 'lucide-react';
 import { ConfigProvider } from 'antd';
+import Home from './pages/Home';
 
 const startTime = '2024-07-01T15:27:00'; // Başlangıç tarihi
 const endTime = '2024-08-05T15:27:00';
@@ -48,8 +48,16 @@ export default function App() {
           colorSuccess: "#2BD46F",
           colorTextBase: "#000",
           colorWarning: "#E69319",
+          fontFamily: "Poppins",
+        },
+        components: {
+          Menu: {
+            itemColor: "#001B33",
+            horizontalItemSelectedColor: "#005197",
+          },
         },
       }}
+      
       >
         <RouterProvider router={router} future={{ v7_startTransition: true }}/>
       </ConfigProvider>

@@ -8,9 +8,9 @@ export default function FloatingButtonMenu() {
   
     return (
         <FloatButton.Group
-        trigger="hover"
+        trigger="click"
         type="primary"
-        style={{ right: 24, bottom: 24 }}
+        style={{ right: 30, bottom: 30 }}
         icon={<FaBolt />}
       >
         <FloatButton icon={<a href='https://maps.app.goo.gl/W7u82W33xBcFCY628' target='_blank' className='hover:text-blue-600'><GrMapLocation /></a>}/>

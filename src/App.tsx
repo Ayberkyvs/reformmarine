@@ -49,6 +49,17 @@ export default function App() {
           colorTextBase: "#000",
           colorWarning: "#E69319",
           fontFamily: "Poppins",
+          fontSizeHeading1: 54,
+          fontSizeHeading2:	36,
+          fontSizeHeading3:	30,
+          fontSizeHeading4:	24,
+          fontSizeHeading5:	21,
+          lineHeightHeading1: 1.5,
+          lineHeightHeading2: 1.5,
+          lineHeightHeading3: 1.5,
+          lineHeightHeading4: 1.5,
+          lineHeightHeading5: 1.3,
+          fontSize: 16,	
         },
         components: {
           Menu: {

@@ -1,4 +1,4 @@
-import { Menu, MenuProps } from "antd"
+import { Menu, MenuProps, Button } from "antd"
 import { Link } from "react-router-dom";
 
 type MenuItem = Required<MenuProps>['items'][number];
@@ -40,23 +40,28 @@ const items: MenuItem[] = [
 function MenuAuto({mode="inline"}: {mode:any}) {
     if (mode == "horizontal") {
         return (
-        <Menu
-            style={{background: "transparent", width: "100%", display: "flex"}}
-            defaultSelectedKeys={['1']}
-            defaultOpenKeys={['menu1']}
-            mode={mode}
-            items={items}
-            disabledOverflow={true}
-        />
+        <>
+            <Menu
+                style={{background: "transparent", width: "100%", display: "flex"}}
+                defaultSelectedKeys={['1']}
+                mode={mode}
+                items={items}
+                disabledOverflow={true}
+            />
+            <Button className="w-[130px] h-[40px] text-base uppercase text-white font-semibold border-0" type="primary">Get A Quote</Button>
+        </>
         )
     }
   return (
+    <>
     <Menu
         defaultSelectedKeys={['1']}
         defaultOpenKeys={['menu1']}
         mode={mode}
         items={items}
     />
+    <Button className="max-w-[330px] w-full h-[40px] text-base uppercase text-white font-semibold mt-2" type="primary">Get A Quote</Button>
+    </>
   )
 }
 

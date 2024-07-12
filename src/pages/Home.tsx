@@ -1,4 +1,5 @@
 import Hero from "../components/Hero/Hero";
+import Services from "../components/Services";
 import Skills from "../components/Skills";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
       {/* <HeroParallax products={products} /> */}
       <Hero />
       <Skills />
+      <Services />
     </section>
   )
 } 

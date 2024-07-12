@@ -35,12 +35,39 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.hero--vector {
+  background-image: url("./assets/vector-1.png");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-feature-settings: 'clig' off, 'liga' off;
+}
 .home {
  background-image: url("./assets/backgrounds/hero-background.png");
  background-size: cover;
  background-position: bottom;
  background-repeat: no-repeat;
 }
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #005197 #f7f8fa;
+  }
 
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #f7f8fa;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #005197;
+    border-radius: 10px;
+    border: 3px none #ffffff;
+  }
 @media only screen and (max-width: 1024px) {
 }

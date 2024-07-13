@@ -1,5 +1,6 @@
 import { Button } from "antd";
 import HeroImage from "../../assets/hero/hero.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const HeroHeading = ()=> {
     return (
@@ -20,7 +21,7 @@ export default function Hero() {
         <div className="flex justify-center items-center max-w-screen-xl w-full h-full">
             <HeroHeading />
             <div className="hidden lg:flex w-1/2 h-fit">
-                <img src={HeroImage} className="w-full h-full" draggable={false}/>
+                <LazyLoadImage src={HeroImage} className="w-full h-full" draggable={false}/>
             </div>
         </div>
     </section>

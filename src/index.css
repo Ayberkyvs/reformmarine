@@ -30,7 +30,7 @@ html {
 }
 
 .countdown {
-  background-image: url('./assets/countdown-background.png');
+  background-image: url('./assets/services/services-mechanical.jpg');
   background-position: bottom center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -69,5 +69,16 @@ html {
     border-radius: 10px;
     border: 3px none #ffffff;
   }
+
+  .no-visible-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .no-visible-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
 @media only screen and (max-width: 1024px) {
 }

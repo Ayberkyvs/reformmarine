@@ -36,8 +36,9 @@ export default function Countdown({ children, startTime, endTime }: {children: a
         return (<>{children}</>)
     }
   return (
-    <div className='countdown flex justify-center items-center w-full min-h-[100vh] h-fit pt-[100px] lg:pt-[130px]'>
-        <div className='flex flex-col justify-center items-center w-full max-w-screen-xl h-fit bg-blue-900/40 py-10 rounded-xl'>
+    <div className='countdown flex justify-center items-center w-full min-h-[100vh] h-fit'>
+        <div className='absolute w-full h-full top-0 bg-white/20'/>
+        <div className='flex flex-col justify-center items-center w-full max-w-screen-xl h-fit py-10 rounded-xl z-[1]'>
             <h1 className='flex text-[18px] md:text-[24px] lg:text-[36px] uppercase tracking-[10px] md:tracking-[20px] font-bold mb-[40px] text-center text-white'>we are comıng soon</h1>
             <div className='flex justify-evenly items-center flex-wrap h-auto w-full gap-[15px] lg:gap-[80px]'>
                 <div className='flex flex-col w-[100px] h-[100px] md:w-[120px] md:h-[120px] bg-primary border border-blue-100 rounded-2xl items-center justify-center text-white'>

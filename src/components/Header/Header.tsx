@@ -39,14 +39,14 @@ export default function Header() {
 
   return (
     <motion.header
-      className="fixed w-full h-fit lg:h-[127px] z-[1]"
+      className="fixed w-full h-fit z-[1]"
       animate={controls}
       initial={{ y: 0, backgroundColor: "transparent" }}
     >
       <Infobar />
       <div className="flex w-full h-fit items-center justify-center">
-        <div className="flex w-full h-[67px] lg:h-[100px] max-w-screen-xl justify-between items-center p-2">
-          <div className="flex w-fit max-w-[160px] lg:max-w-[227px] h-full max-h-[50px] lg:max-h-[77px]">
+        <div className="flex w-full h-[67px] lg:h-[90px] max-w-screen-xl justify-between items-center p-2">
+          <div className="flex w-fit max-w-[160px] lg:max-w-[227px] h-full">
             <Link to="/" replace>
               <img src={LogoBlue} alt="Reform Marine White Color Brand Logo" className="w-full h-full" draggable={false}/>
             </Link>

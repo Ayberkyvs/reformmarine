@@ -1,5 +1,6 @@
 import { Menu, MenuProps, Button } from "antd"
 import { Link } from "react-router-dom";
+import Socials from "../Socials";
 
 type MenuItem = Required<MenuProps>['items'][number];
 const items: MenuItem[] = [
@@ -7,14 +8,7 @@ const items: MenuItem[] = [
     {
       type: 'divider',
     },
-    {
-      key: 'menu1',
-      label: <span className="uppercase font-semibold">About Us</span>,
-      children: [
-        { key: '2', label: <Link to="/company">The Company</Link>},
-        { key: '3', label: <Link to="/gallery">Gallery</Link>},
-      ],
-    },
+    { key: '2', label: <Link to="/products" className="uppercase font-semibold">Products</Link>},
     {
       type: 'divider',
     },
@@ -30,7 +24,14 @@ const items: MenuItem[] = [
     {
       type: 'divider',
     },
-    { key: '7', label: <Link to="/products" className="uppercase font-semibold">Products</Link>},
+    {
+      key: 'menu1',
+      label: <span className="uppercase font-semibold">About Us</span>,
+      children: [
+        { key: '7', label: <Link to="/company">The Company</Link>},
+        { key: '8', label: <Link to="/gallery">Gallery</Link>},
+      ],
+    },
     {
       type: 'divider',
     },
@@ -53,15 +54,16 @@ function MenuAuto({mode="inline"}: {mode:any}) {
         )
     }
   return (
-    <>
+    <div className="gap-2">
     <Menu
         defaultSelectedKeys={['1']}
         defaultOpenKeys={['menu1']}
         mode={mode}
         items={items}
     />
-    <Button className="max-w-[330px] w-full h-[40px] text-base uppercase font-semibold mt-2" type="primary">Get A Quote</Button>
-    </>
+    <Button className="max-w-[330px] w-full h-[40px] text-base uppercase font-semibold" type="primary">Get A Quote</Button>
+    <Socials className="mt-6 w-full justify-evenly items-start text-xl text-orange-500"/>
+    </div>
   )
 }
 

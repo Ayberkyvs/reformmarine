@@ -27,7 +27,7 @@ const tabs = [
     title: "Products",
     value: "products",
     content: (
-      <div className="flex justify-center w-full overflow-hidden relative h-full rounded-2xl p-10 text-blue-900 bg-gradient-to-br from-blue-50 to-blue-300">
+      <div className="flex justify-center w-full overflow-hidden relative h-full rounded-2xl p-8 text-blue-900 bg-gradient-to-br from-blue-50 to-blue-300">
         <DummyContent title="Products" description="We offer a comprehensive range of spare parts 
         for electrical and machinery systems, ensuring that you have everything you need to 
         keep your vessel running smoothly and efficiently." calltoaction="/products" image={Image1}/>
@@ -38,7 +38,7 @@ const tabs = [
     title: "Electrical Service",
     value: "Electrical Service",
     content: (
-      <div className="flex justify-center w-full overflow-hidden relative h-full rounded-2xl p-10 text-orange-900 bg-gradient-to-br from-orange-50 to-orange-300">
+      <div className="flex justify-center w-full overflow-hidden relative h-full rounded-2xl p-8 text-orange-900 bg-gradient-to-br from-orange-50 to-orange-300">
         <DummyContent title="Electrical Service" description="Lorem ipsum dolor sit amet consectetur. Imperdiet sollicitudin gravida tincidunt elit sed elit netus orci accumsan. Habitasse pretium viverra nullam turpis. A nunc aenean 
         pellentesque sed ac eu nulla elementum nibh. Bibendum eget at urna erat. Vel 
         vitae facilisis varius posuere viverra egestas risus eu. Tellus turpis purus 
@@ -50,7 +50,7 @@ const tabs = [
     title: "Mechanical Service",
     value: "Mechanical Service",
     content: (
-      <div className="flex justify-center w-full overflow-hidden relative h-full rounded-2xl p-10 text-green-900 bg-gradient-to-br from-green-50 to-green-300">
+      <div className="flex justify-center w-full overflow-hidden relative h-full rounded-2xl p-8 text-green-900 bg-gradient-to-br from-green-50 to-green-300">
         <DummyContent title="Mechanical Service" description="Lorem ipsum dolor sit amet consectetur. Imperdiet sollicitudin gravida tincidunt elit sed elit netus orci accumsan. Habitasse pretium viverra nullam turpis. A nunc aenean 
         pellentesque sed ac eu nulla elementum nibh. Bibendum eget at urna erat. Vel 
         vitae facilisis varius posuere viverra egestas risus eu. Tellus turpis purus 
@@ -62,7 +62,7 @@ const tabs = [
     title: "Spare Parts",
     value: "Spare Parts",
     content: (
-      <div className="flex justify-center w-full overflow-hidden relative h-full rounded-2xl p-10 text-red-900 bg-gradient-to-br from-red-50 to-red-300">
+      <div className="flex justify-center w-full overflow-hidden relative h-full rounded-2xl p-8 text-red-900 bg-gradient-to-br from-red-50 to-red-300">
         <DummyContent title="Spare Parts" description="Lorem ipsum dolor sit amet consectetur. Imperdiet sollicitudin gravida tincidunt elit sed elit netus orci accumsan. Habitasse pretium viverra nullam turpis. A nunc aenean 
         pellentesque sed ac eu nulla elementum nibh. Bibendum eget at urna erat. Vel 
         vitae facilisis varius posuere viverra egestas risus eu. Tellus turpis purus 

@@ -2,7 +2,7 @@ import { FaWhatsapp, FaInstagram, FaLinkedin, FaGooglePlus } from "react-icons/f
 
 export default function Socials({className}: {className?:String}) {
   return (
-    <ul className={`flex items-center gap-[5px] w-fit h-full text-base text-orange-800 ${className}`}>
+    <ul className={`flex items-center gap-[10px] w-fit h-full text-base text-orange-800 ${className}`}>
         <a href="https://wa.me/905325675350" target="_blank">
             <li><FaWhatsapp/></li>
         </a>

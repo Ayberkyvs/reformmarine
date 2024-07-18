@@ -68,7 +68,7 @@ export const Tabs = ({
               />
             )}
  
-            <span className={`relative block ${active.value === tab.value ? "text-blue-800 font-semibold" : "text-black/70"} text-sm lg:text-base`}>
+            <span className={`relative block ${active.value === tab.value ? "text-blue-900 font-semibold" : "text-black/70"} text-sm lg:text-base`}>
               {tab.title}
             </span>
           </button>

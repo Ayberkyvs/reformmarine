@@ -64,7 +64,8 @@ export default function App() {
         components: {
           Menu: {
             itemColor: "#001B33",
-            horizontalItemSelectedColor: "#005197",
+            horizontalItemSelectedColor: "#0089FF",
+            itemHoverColor: "#0089FF",
           },
         },
       }}

@@ -14,7 +14,7 @@ const HeroHeading = ()=> {
         optimize the travel experience by improving the safety and performance of marine 
         vessels with electrical maintenance services.
         </p>
-        <Button type="primary" className="text-sm lg:text-base p-4 uppercase font-bold mt-4 rounded-full">Get a quote</Button>
+        {/* <Button type="primary" className="text-sm lg:text-base p-4 uppercase font-bold mt-4 rounded-full">Get a quote</Button> */}
       </div>
     )
 }

@@ -3,7 +3,7 @@ import Banner from "../assets/couplephoto.png"
 import { motion } from "framer-motion"
 export default function AboutUs() {
   return (
-    <div className="flex justify-center items-center w-full h-fit lg:h-[650px] p-4 my-20 bg-blue-200 py-10">
+    <div className="flex justify-center items-center w-full h-fit lg:h-[650px] p-4 my-20 bg-[#E2E7F0] py-10">
         <div className="max-w-screen-xl w-full grid grid-cols-1 lg:grid-cols-2 gap-4 h-full">
             <div className="flex flex-col h-full bg-white rounded-xl gap-2 p-8 shadow-sm">
                 <h6 className="text-orange-500 text-sm md:text-base font-bold">About Us</h6>

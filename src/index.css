@@ -45,7 +45,7 @@ html {
 .home {
  background-image: url("./assets/backgrounds/hero-background.png");
  background-size: cover;
- background-position: bottom;
+ background-position: top;
  background-repeat: no-repeat;
 }
 /* ===== Scrollbar CSS ===== */

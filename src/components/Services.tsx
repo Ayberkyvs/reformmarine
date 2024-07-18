@@ -74,8 +74,10 @@ const tabs = [
 
 function Services() {
   return (
-    <div className="h-[25rem] lg:h-[30rem] [perspective:1000px] relative flex flex-col max-w-screen-xl mx-auto w-full items-start justify-start my-20 px-4 lg:p-0">
-      <Tabs tabs={tabs} />
+    <div className="w-full h-full border-2 my-20">
+      <div className="h-[25rem] lg:h-[30rem] [perspective:1000px] relative flex flex-col max-w-screen-xl mx-auto w-full items-start justify-start px-4 lg:p-0">
+        <Tabs tabs={tabs} />
+      </div>
     </div>
   )
 }

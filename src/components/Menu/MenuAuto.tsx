@@ -49,7 +49,7 @@ function MenuAuto({mode="inline"}: {mode:any}) {
                 items={items}
                 disabledOverflow={true}
             />
-            <Button className="w-[130px] h-[40px] text-base uppercase font-semibold border-0" type="primary">Get A Quote</Button>
+            {/* <Button className="w-[130px] h-[40px] text-base uppercase font-semibold border-0" type="primary">Get A Quote</Button> */}
         </>
         )
     }
@@ -61,7 +61,7 @@ function MenuAuto({mode="inline"}: {mode:any}) {
         mode={mode}
         items={items}
     />
-    <Button className="max-w-[330px] w-full h-[40px] text-base uppercase font-semibold" type="primary">Get A Quote</Button>
+    {/* <Button className="max-w-[330px] w-full h-[40px] text-base uppercase font-semibold" type="primary">Get A Quote</Button> */}
     <Socials className="mt-6 w-full justify-evenly items-start text-xl text-orange-500"/>
     </div>
   )

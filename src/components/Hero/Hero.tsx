@@ -14,17 +14,17 @@ const HeroHeading = ()=> {
         optimize the travel experience by improving the safety and performance of marine 
         vessels with electrical maintenance services.
         </p>
-        <Button type="primary" className="uppercase font-bold mt-4 h-10">Get a quote</Button>
+        <Button type="primary" className="text-sm lg:text-base p-4 uppercase font-bold mt-4 rounded-full">Get a quote</Button>
       </div>
     )
 }
 export default function Hero() {
   return (
-    <section className="home flex justify-center items-center w-full h-screen mb-10">
-        <div className="flex justify-center items-center max-w-screen-xl w-full h-full max-h-[500px] gap-4">
+    <section className="home flex justify-center items-center w-full h-[100vh] mb-10">
+        <div className="flex justify-center items-center max-w-screen-xl w-full h-full gap-4">
             <HeroHeading />
-            <div className="hidden lg:flex w-1/2 h-full">
-                <LazyLoadImage src={HeroImage} className="w-full h-full object-fill" draggable={false}/>
+            <div className="hidden lg:flex lg:justify-end w-1/2 h-fit">
+                <LazyLoadImage src={HeroImage} className="w-full h-full object-cover object-top" draggable={false}/>
             </div>
         </div>
     </section>

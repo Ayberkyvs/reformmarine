@@ -5,7 +5,7 @@ import Skills from "../components/Skills";
 
 export default function Home() {
   return (
-    <section className="flex flex-col gap-5 w-full h-fit pb-[100px] bg-white-light">
+    <section className="flex flex-col gap-[50px] w-full h-fit pb-[100px] bg-white-light">
       <Hero />
       <Skills />
       <Services />

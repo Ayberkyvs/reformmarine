@@ -1,29 +1,12 @@
-import { useState } from "react";
 import ContactUsPhoto from "../assets/contactus/ContactUs.png"
 import { Button, Form, Input, Row, Col, Select} from 'antd';
 import SectionHeading from "./SectionHeading";
 import { IoMdSend } from "react-icons/io";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
-type LayoutType = Parameters<typeof Form>[0]['layout'];
 const { TextArea } = Input;
 
 export default function ContactUs() {
-    const [autoCompleteResult, setAutoCompleteResult] = useState<string[]>([]);
-
-    const onWebsiteChange = (value: string) => {
-      if (!value) {
-        setAutoCompleteResult([]);
-      } else {
-        setAutoCompleteResult(['.com', '.org', '.net'].map((domain) => `${value}${domain}`));
-      }
-    };
-  
-    const websiteOptions = autoCompleteResult.map((website) => ({
-      label: website,
-      value: website,
-    }));
-
     const onFinish = (values:any) => {
         console.log('Success:', values);
     };
@@ -35,8 +18,9 @@ export default function ContactUs() {
   return (
     <div className="flex w-full min-h-screen h-fit mt-[100px]">
         <LazyLoadImage src={ContactUsPhoto} alt="Contact Us Photo" className="hidden lg:flex w-1/2 h-full object-cover"/>
-        <div className="w-full lg:w-1/2 h-full flex flex-col justify-center items-end p-8">
-        <SectionHeading title="Leave us a few words" subtitle="Contact Us" align="right" className=""/>
+        <div className="w-full lg:w-1/2 h-full flex flex-col justify-center items-center p-8">
+        <div className="w-full h-full max-w-[620px]">
+        <SectionHeading title="Leave us a few words" subtitle="Contact Us" align="right" className="w-full items-end"/>
         <Form
         name="contact_form"
         initialValues={{ remember: true }}
@@ -133,6 +117,7 @@ export default function ContactUs() {
             </Button>
         </Form.Item>
         </Form>
+        </div>        
         </div>
     </div>
   )

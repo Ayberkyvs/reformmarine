@@ -48,6 +48,12 @@ html {
  background-position: top;
  background-repeat: no-repeat;
 }
+.notfound {
+  background-image: url("./assets/backgrounds/not-found-bg.png");
+  background-position: top right -200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 /* ===== Scrollbar CSS ===== */
   /* Firefox */
 * {

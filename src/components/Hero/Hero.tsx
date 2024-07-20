@@ -1,4 +1,3 @@
-import { Button } from "antd";
 import HeroImage from "../../assets/hero/hero.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 

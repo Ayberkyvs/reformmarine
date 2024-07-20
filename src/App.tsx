@@ -9,6 +9,7 @@ import MainLayout from "./layouts/MainLayout"
 import Countdown from './components/Countdown';
 import { ConfigProvider } from 'antd';
 import Home from './pages/Home';
+import NotFound from './pages/NotFound';
 
 const startTime = '2024-07-01T15:27:00'; // Başlangıç tarihi
 const endTime = '2024-08-05T15:27:00';
@@ -26,7 +27,11 @@ export default function App() {
         {
           path: "/home",
           element: <Home />
-        }
+        },
+        {
+          path: "404",
+          element: <NotFound />,
+        },
       ]
       // errorElement: <ErrorBoundary />,
     },

@@ -20,7 +20,7 @@ const HeroHeading = ()=> {
 }
 export default function Hero() {
   return (
-    <section className="home flex justify-center items-center w-full h-[100vh] mb-10">
+    <section className="home flex justify-center items-center w-full h-screen mb-10">
         <div className="flex justify-center items-center max-w-screen-xl w-full h-full gap-4">
             <HeroHeading />
             <div className="hidden lg:flex lg:justify-end w-1/2 h-fit">

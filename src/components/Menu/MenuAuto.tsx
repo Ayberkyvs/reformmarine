@@ -49,7 +49,7 @@ function MenuAuto({mode="inline"}: {mode:any}) {
               items={items}
               disabledOverflow={true}
           />
-          <Button type="primary" className="text-sm lg:text-base p-4 ml-2 font-semibold rounded-full bg-blue-500">Get a quote</Button>
+          <Button type="primary" className="text-sm lg:text-base p-4 ml-2 font-semibold rounded-md">Get a quote</Button>
           </>
         )
     }

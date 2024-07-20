@@ -3,7 +3,7 @@ import Banner from "../assets/couplephoto.png"
 import { motion } from "framer-motion"
 export default function AboutUs() {
   return (
-    <div className="flex justify-center items-center w-full h-fit lg:h-[650px] p-4 my-20 bg-[#E2E7F0] py-10">
+    <section className="flex justify-center items-center w-full h-fit lg:h-[650px] p-4 my-20 bg-orange-50 py-10 mt-[200px]">
         <div className="max-w-screen-xl w-full grid grid-cols-1 lg:grid-cols-2 gap-4 h-full">
             <div className="flex flex-col h-full bg-white rounded-xl gap-2 p-8 shadow-sm">
                 <h6 className="text-orange-500 text-sm md:text-base font-bold">About Us</h6>
@@ -11,7 +11,7 @@ export default function AboutUs() {
                 <p className="text-sm md:text-base text-black/70 mt-12">Lorem ipsum dolor sit amet consectetur. Erat nulla quam ante aenean volutpat eget. Tincidunt amet turpis consectetur venenatis imperdiet vitae est. Velit tortor arcu mauris vel phasellus sagittis quis enim. Mauris mi vulputate leo mi. Urna integer vulputate nisi praesent tellus sit tempor. Eu integer aliquam mauris amet tempor quis. Posuere libero eleifend massa mauris imperdiet ut id elementum. Ut amet duis lacus lectus ultrices. Pharetra massa sapien suspendisse lectus vulputate id semper.
                 Vitae molestie vel bibendum praesent mi. Quis nibh morbi ipsum neque eros tortor. At justo interdum sem mauris.</p>
             </div>
-            <div className="flex flex-col-reverse lg:flex-col gap-4 justify-between min-h-[250px] lg:h-full">
+            <div className="flex flex-col gap-4 justify-between min-h-[250px] lg:h-full">
                 <div className="block h-1/2 bg-white rounded-xl"> 
                     <LazyLoadImage src={Banner} alt="wrfasda" className="w-full h-full rounded-xl object-cover object-top"/>
                 </div>
@@ -63,6 +63,6 @@ export default function AboutUs() {
                 </div>
             </div>
         </div>
-    </div>
+    </section>
   );
 }

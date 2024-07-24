@@ -40,11 +40,11 @@ const Skill = ({data}: {data:any})=> {
 }
 export default function Skills() {
   return (
-    <section className="flex items-center justify-center w-full h-fit md:max-h-[550px] px-4 lg:p-0 mt-[100px]">
+    <section className="flex items-center justify-center w-full h-fit md:max-h-[550px] px-4 lg:p-0 mt-[50px]">
         <div className="flex flex-col w-full max-w-screen-xl h-full gap-[60px]">
             <div className="flex flex-col text-center w-full h-fit gap-3">
                 <p className="text-black/80 font-normal text-sm md:text-base">We stand by everyone voyaging on the seas.</p>
-                <h1 className="text-black font-bold text-2xl md:text-4xl">We Care About Your <span className="text-orange-500">Vessels.</span></h1>
+                <h1 className="text-black font-bold text-2xl lg:text-3xl">We Care About Your <span className="text-orange-500">Vessels.</span></h1>
             </div>
             <div className="w-full">
                 <Skill data={data}/>

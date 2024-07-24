@@ -1,7 +1,7 @@
 import { Button, Result } from 'antd';
 function NotFound() {
   return (
-    <section style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: 'fit-content', backgroundColor: '#fff' }} className='notfound pt-[100px] border-2'>
+    <section style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: 'fit-content', backgroundColor: '#fff' }} className='pt-[100px] border-2'>
     <Result
         status="404"
         title={<h1 className='font-bold text-8xl text-primary'>404</h1>}

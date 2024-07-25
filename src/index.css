@@ -3,23 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer base {
-  @font-face {
-    font-family: 'Proxima Nova';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(./assets/fonts/proximanova_regular.ttf) format('ttf');
-  }
-  @font-face {
-    font-family: 'Proxima Nova';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url(./assets/fonts/proximanova_bold.otf) format('otf');
-  }
-} */
-
 html {
   font-family: "Poppins", Helvetica, sans-serif;
 }
@@ -29,30 +12,11 @@ html {
   padding: 0px;
 }
 
-.countdown {
-  background-image: url('./assets/services/services-mechanical.jpg');
-  background-position: bottom center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.hero--vector {
-  background-image: url("./assets/vector-1.png");
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  font-feature-settings: 'clig' off, 'liga' off;
-}
 .home {
- background-image: url("./assets/backgrounds/hero-background.png");
+ background-image: url("./assets/backgrounds/hero-background.webp");
  background-size: cover;
  background-position: center right;
  background-repeat: no-repeat;
-}
-.notfound {
-  background-image: url("./assets/backgrounds/not-found-bg.png");
-  background-position: top right -200px;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 /* ===== Scrollbar CSS ===== */
   /* Firefox */

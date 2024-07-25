@@ -1,62 +1,67 @@
-import { Menu, MenuProps, Button } from "antd"
-import { Link } from "react-router-dom";
+import { Menu, MenuProps, Button, MenuTheme } from "antd"
+import { Link, useLocation } from "react-router-dom";
 import Socials from "../Socials";
 
 type MenuItem = Required<MenuProps>['items'][number];
 const items: MenuItem[] = [
-    { key: '1', label: <Link to="/" className="font-semibold">Home</Link>},
+    { key: 'home', label: <Link to="/" className="font-semibold">Home</Link>},
     {
       type: 'divider',
     },
-    { key: '2', label: <Link to="/products" className="font-semibold">Products</Link>},
-    {
-      type: 'divider',
-    },
-    {
-      key: 'menu2',
-      label: <span className="font-semibold">Services</span>,
-      children: [
-        { key: '4', label: <Link to="/electrical">Electrical Service</Link>},
-        { key: '5', label: <Link to="/mechanical">Mechanical Service</Link>},
-        { key: '6', label: <Link to="/spareparts">Spare Parts</Link>},
-      ],
-    },
+    { key: 'products', label: <Link to="products" className="font-semibold">Products</Link>},
     {
       type: 'divider',
     },
     {
       key: 'menu1',
-      label: <span className="font-semibold">About Us</span>,
+      label: <span className="font-semibold">Services</span>,
       children: [
-        { key: '7', label: <Link to="/company">The Company</Link>},
-        { key: '8', label: <Link to="/gallery">Gallery</Link>},
+        { key: 'electrical', label: <Link to="electrical">Electrical Service</Link>},
+        { key: 'mechanical', label: <Link to="mechanical">Mechanical Service</Link>},
+        { key: 'spareparts', label: <Link to="spareparts">Spare Parts</Link>},
       ],
     },
     {
       type: 'divider',
     },
-    { key: '8', label: <Link to="/contactus" className="font-semibold">Contact Us</Link>},
+    {
+      key: 'menu2',
+      label: <span className="font-semibold">About Us</span>,
+      children: [
+        { key: 'company', label: <Link to="company">The Company</Link>},
+        { key: 'gallery', label: <Link to="gallery">Gallery</Link>},
+      ],
+    },
+    {
+      type: 'divider',
+    },
+    { key: 'contact', label: <Link to="contact" className="font-semibold">Contact Us</Link>},
   ];
 
-function MenuAuto({mode="inline"}: {mode:any}) {
+function MenuAuto({mode="inline", theme="light"}: {mode:any, theme: MenuTheme}) {
+    const location = useLocation();
+    const pathSnippets = (location.pathname.split('/').filter(i => i).length > 0 ? location.pathname.split('/').filter(i => i) : ["home"]);
     if (mode == "horizontal") {
         return (
           <>
           <Menu
               style={{background: "transparent", width: "100%", display: "flex"}}
-              defaultSelectedKeys={['1']}
+              selectedKeys={pathSnippets}
+              defaultSelectedKeys={["home"]}
               mode={mode}
               items={items}
               disabledOverflow={true}
+              theme={theme}
           />
-          <Button type="primary" className="text-sm lg:text-base p-4 ml-2 font-semibold rounded-md">Get a quote</Button>
+          <Button type={theme === "light" ? "primary" : "default"} className="text-sm lg:text-base p-4 ml-2 font-semibold rounded-md">Get a quote</Button>
           </>
         )
     }
   return (
     <div className="gap-2">
     <Menu
-        defaultSelectedKeys={['1']}
+        selectedKeys={pathSnippets}
+        defaultSelectedKeys={["home"]}
         defaultOpenKeys={['menu1']}
         mode={mode}
         items={items}

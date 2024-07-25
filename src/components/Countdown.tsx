@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import PageHeading from './PageHeading';
 
 interface CountdownProps {
     children: React.ReactNode;
@@ -51,21 +52,22 @@ export default function Countdown({ children, startTime, endTime }: CountdownPro
     }
 
     return (
-        <section className="flex flex-col justify-center items-center w-full min-h-screen bg-gradient-to-b from-blue-50 to-blue-300 text-white gap-6 p-4">
-            <div className="flex justify-between w-full h-fit max-w-screen-xl flex-wrap">
-                {Object.entries(timeRemaining).map(([unit, value]) => (
-                    <div key={unit} className="flex flex-col justify-center items-center bg-white w-[120px] h-[120px] md:w-[180px] md:h-[180px] lg:w-[250px] lg:h-[250px] gap-2 rounded-xl shadow-md m-2">
-                        <div className="text-3xl md:text-5xl lg:text-7xl font-bold text-blue-500">{value}</div>
-                        <div className="text-sm md:text-lg lg:text-2xl uppercase text-blue-800 font-semibold">{unit}</div>
-                    </div>
-                ))}
-            </div>
-            <div className='flex flex-col max-w-screen-xl w-full'>
-                <div className='flex flex-col gap-2 max-w-[100%] md:max-w-[75%] lg:max-w-[50%] text-black'>
-                    <h1 className='text-base md:text-lg lg:text-2xl uppercase font-bold'>We are coming soon!</h1>
-                    <p className='text-xs md:text-base lg:text-lg'>This website is currently under construction and development. It will open within the specified time. Please try again later.</p>
+        <section className='bg-gray-100'>
+            <PageHeading title='We are coming soon!' backgroundImage='https://images.pexels.com/photos/1544372/pexels-photo-1544372.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'/>
+            <div className='flex justify-between max-w-screen-xl w-full h-full m-auto py-20'>
+            {Object.entries(timeRemaining).map(([unit, value]) => (
+                <div key={unit} className="flex flex-col justify-center items-center bg-white w-[120px] h-[120px] md:w-[180px] md:h-[180px] lg:w-[250px] lg:h-[250px] gap-2 rounded-xl shadow-md m-2">
+                    <div className="text-3xl md:text-5xl lg:text-7xl font-bold text-blue-500">{value}</div>
+                    <div className="text-sm md:text-lg lg:text-2xl uppercase text-blue-800 font-semibold">{unit}</div>
                 </div>
+            ))}
             </div>
         </section>
     );
 }
+// {Object.entries(timeRemaining).map(([unit, value]) => (
+//     <div key={unit} className="flex flex-col justify-center items-center bg-white w-[120px] h-[120px] md:w-[180px] md:h-[180px] lg:w-[250px] lg:h-[250px] gap-2 rounded-xl shadow-md m-2">
+//         <div className="text-3xl md:text-5xl lg:text-7xl font-bold text-blue-500">{value}</div>
+//         <div className="text-sm md:text-lg lg:text-2xl uppercase text-blue-800 font-semibold">{unit}</div>
+//     </div>
+// ))}

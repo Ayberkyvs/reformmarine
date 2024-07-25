@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button, Form, Input, Row, Col, Select, message as antdMessage } from 'antd';
 import { IoMdSend } from "react-icons/io";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import ContactUsPhoto from "../assets/contactus/ContactUs.png"
+import ContactUsPhoto from "../assets/banners/contactus.png"
 import SectionHeading from "./SectionHeading";
 import emailjs from '@emailjs/browser';
 import ReCAPTCHA from "react-google-recaptcha";
@@ -23,11 +23,11 @@ export default function ContactUs() {
             "service_29uwzfa",
             "template_6orjnf8",
             values,
-        ).then((result) => {
+        ).then(() => {
             setLoading(false);
             antdMessage.success('Message sent successfully!');
             form.resetFields();
-        }).catch((error) => {
+        }).catch(() => {
             setLoading(false);
             antdMessage.error('Failed to send message. Please try again.');
         });

@@ -10,6 +10,10 @@ import Countdown from './components/Countdown';
 import { ConfigProvider } from 'antd';
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
+import Products from './pages/Products';
+import TheCompany from './pages/TheCompany';
+import Gallery from './pages/Gallery';
+import ContactUs from './pages/ContactUs';
 
 const startTime = '2024-07-01T15:27:00'; // Başlangıç tarihi
 const endTime = '2024-08-05T15:27:00';
@@ -27,6 +31,22 @@ export default function App() {
         {
           path: "/home",
           element: <Home />
+        },
+        {
+          path: "products",
+          element: <Products />
+        },
+        {
+          path: "company",
+          element: <TheCompany />,
+        },
+        {
+          path: "gallery",
+          element: <Gallery />,
+        },
+        {
+          path: "contact",
+          element: <ContactUs />,
         },
         {
           path: "404",
@@ -68,10 +88,17 @@ export default function App() {
         },
         components: {
           Menu: {
+            darkItemSelectedBg: "#fff",
+            darkItemSelectedColor: "#005197",
             itemColor: "#001B33",
-            horizontalItemSelectedColor: "#0089FF",
-            itemHoverColor: "#0089FF",
           },
+          Breadcrumb: {
+            itemColor: "rgba(255, 255, 255, 0.75)",
+            lastItemColor: "rgba(255, 255, 255, 1.0)",
+            linkColor: "rgba(255, 255, 255, 0.75)",
+            linkHoverColor:	"rgba(255, 255, 255, 1.0)",
+            separatorColor:	"rgba(255, 255, 255, 0.75)",
+          }
         },
       }}
       >

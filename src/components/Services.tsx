@@ -1,9 +1,9 @@
 "use client";
 import { Tabs } from "../components/ui/tabs";
-import Image1 from "../assets/services/services-products.jpg";
-import Image2 from "../assets/services/services-electrical.jpg";
-import Image3 from "../assets/services/services-mechanical.jpg";
-import Image4 from "../assets/services/services-spareparts.jpg";
+import Image1 from "../assets/banners/products.jpg";
+import Image2 from "../assets/banners/electrical.jpg";
+import Image3 from "../assets/banners/mechanical.jpg";
+import Image4 from "../assets/banners/spareparts.jpg";
 import { Button } from "antd";
 import { Link } from "react-router-dom";
 import { FaAngleRight } from "react-icons/fa6"
@@ -35,8 +35,8 @@ const tabs = [
     ),
   },
   {
-    title: "Electrical Service",
-    value: "Electrical Service",
+    title: "Electrical",
+    value: "Electrical",
     content: (
       <div className="flex justify-center w-full overflow-hidden relative h-full rounded-2xl p-8 text-orange-900 bg-gradient-to-br from-orange-50 to-orange-300">
         <DummyContent title="Electrical Service" description="Lorem ipsum dolor sit amet consectetur. Imperdiet sollicitudin gravida tincidunt elit sed elit netus orci accumsan. Habitasse pretium viverra nullam turpis. A nunc aenean 
@@ -47,8 +47,8 @@ const tabs = [
     ),
   },
   {
-    title: "Mechanical Service",
-    value: "Mechanical Service",
+    title: "Mechanical",
+    value: "Mechanical",
     content: (
       <div className="flex justify-center w-full overflow-hidden relative h-full rounded-2xl p-8 text-green-900 bg-gradient-to-br from-green-50 to-green-300">
         <DummyContent title="Mechanical Service" description="Lorem ipsum dolor sit amet consectetur. Imperdiet sollicitudin gravida tincidunt elit sed elit netus orci accumsan. Habitasse pretium viverra nullam turpis. A nunc aenean 

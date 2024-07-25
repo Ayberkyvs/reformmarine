@@ -45,7 +45,7 @@ html {
 .home {
  background-image: url("./assets/backgrounds/hero-background.png");
  background-size: cover;
- background-position: top;
+ background-position: center right;
  background-repeat: no-repeat;
 }
 .notfound {

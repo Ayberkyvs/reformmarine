@@ -21,6 +21,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          CI: false
     
       - name: Push
         uses: s0/git-publish-subdir-action@develop

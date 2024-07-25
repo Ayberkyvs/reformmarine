@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button, Form, Input, Row, Col, Select, message as antdMessage } from 'antd';
 import { IoMdSend } from "react-icons/io";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import ContactUsPhoto from "../assets/banners/contactus.png"
+import ContactUsPhoto from "../assets/banners/contactus.webp"
 import SectionHeading from "./SectionHeading";
 import emailjs from '@emailjs/browser';
 import ReCAPTCHA from "react-google-recaptcha";

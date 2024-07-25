@@ -1,5 +1,5 @@
 import PageHeading from "../components/PageHeading"
-import Banner from "../assets/banners/products.jpg"
+import Banner from "../assets/banners/products.webp"
 function Products() {
   return (
     <section>

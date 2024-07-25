@@ -38,7 +38,7 @@ const items: MenuItem[] = [
     { key: 'contact', label: <Link to="contact" className="font-semibold">Contact Us</Link>},
   ];
 
-function MenuAuto({mode="inline", theme="light"}: {mode:any, theme: MenuTheme}) {
+function MenuAuto({mode="inline", theme="light", onClose}: {mode:any, theme: MenuTheme, onClose?: any}) {
     const location = useLocation();
     const pathSnippets = (location.pathname.split('/').filter(i => i).length > 0 ? location.pathname.split('/').filter(i => i) : ["home"]);
     if (mode == "horizontal") {
@@ -65,6 +65,7 @@ function MenuAuto({mode="inline", theme="light"}: {mode:any, theme: MenuTheme}) 
         defaultOpenKeys={['menu1']}
         mode={mode}
         items={items}
+        onClick={()=> onClose()}
     />
     {/* <Button className="max-w-[330px] w-full h-[40px] text-base uppercase font-semibold" type="primary">Get A Quote</Button> */}
     <Socials className="mt-6 w-full justify-evenly items-start text-xl text-orange-500"/>

@@ -18,12 +18,12 @@ jobs:
 
       - name: Install all dependencies
         run: npm install
+        env:
+          CI: false
 
       - name: Build
         run: npm run build
-        env:
-          CI: false
-    
+
       - name: Push
         uses: s0/git-publish-subdir-action@develop
         env:

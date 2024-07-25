@@ -1,9 +1,9 @@
 "use client";
 import { Tabs } from "../components/ui/tabs";
-import Image1 from "../assets/banners/products.jpg";
-import Image2 from "../assets/banners/electrical.jpg";
-import Image3 from "../assets/banners/mechanical.jpg";
-import Image4 from "../assets/banners/spareparts.jpg";
+import Image1 from "../assets/banners/products.webp";
+import Image2 from "../assets/banners/electrical.webp";
+import Image3 from "../assets/banners/mechanical.webp";
+import Image4 from "../assets/banners/spareparts.webp";
 import { Button } from "antd";
 import { Link } from "react-router-dom";
 import { FaAngleRight } from "react-icons/fa6"

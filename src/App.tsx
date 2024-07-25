@@ -1,19 +1,17 @@
-import './App.css'
-import {
-  createHashRouter,
-  Navigate,
-  RouterProvider,
-} from "react-router-dom";
-import { Suspense } from 'react';
-import MainLayout from "./layouts/MainLayout"
-import Countdown from './components/Countdown';
+import { Suspense, lazy } from 'react';
+import { createHashRouter, Navigate, RouterProvider } from "react-router-dom";
 import { ConfigProvider } from 'antd';
-import Home from './pages/Home';
-import NotFound from './pages/NotFound';
-import Products from './pages/Products';
-import TheCompany from './pages/TheCompany';
-import Gallery from './pages/Gallery';
-import ContactUs from './pages/ContactUs';
+import './App.css';
+import Loader from './components/Loader';
+
+const MainLayout = lazy(() => import("./layouts/MainLayout"));
+const Countdown = lazy(() => import('./components/Countdown'));
+const Home = lazy(() => import('./pages/Home'));
+const NotFound = lazy(() => import('./pages/NotFound'));
+const Products = lazy(() => import('./pages/Products'));
+const TheCompany = lazy(() => import('./pages/TheCompany'));
+const Gallery = lazy(() => import('./pages/Gallery'));
+const ContactUs = lazy(() => import('./pages/ContactUs'));
 
 const startTime = '2024-07-01T15:27:00'; // Başlangıç tarihi
 const endTime = '2024-08-05T15:27:00';
@@ -61,8 +59,7 @@ export default function App() {
     },
   ]);
   return (
-    <Suspense fallback={<h1>Loading..</h1>}> 
-      <ConfigProvider 
+    <ConfigProvider 
       theme={{
         token: {
           colorPrimary: '#005197',
@@ -102,8 +99,9 @@ export default function App() {
         },
       }}
       >
+      <Suspense fallback={<Loader />}> 
         <RouterProvider router={router} future={{ v7_startTransition: true }}/>
-      </ConfigProvider>
-    </Suspense>
+      </Suspense>
+    </ConfigProvider>
   );
 }

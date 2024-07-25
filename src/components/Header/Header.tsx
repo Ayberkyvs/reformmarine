@@ -50,9 +50,8 @@ export default function Header() {
       <Infobar />
       <div className="flex w-full h-fit items-center justify-center">
         <div className="flex w-full h-[67px] lg:h-[90px] max-w-screen-xl justify-between items-center p-2">
-          <div className="flex w-fit h-full max-w-[150px] lg:max-w-none">
+          <div className="flex w-full h-full max-w-[100px] lg:max-w-[140px]">
             <Link to="/" replace>
-              {/* <img src={LogoBlue} alt="Reform Marine White Color Brand Logo" className="w-full h-full" draggable={false}/> */}
               <Logo className={`w-full h-full ${mode === "light" ? "text-primary" : "text-white"}`} />
             </Link>
           </div>

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Card, Modal } from 'antd';
 import 'antd/dist/reset.css'; // Ant Design stil dosyası
 import PageHeading from '../components/PageHeading';
-
+import Banner from "../assets/banners/gallery.webp"
 const { Meta } = Card;
 
 const Gallery = () => {
@@ -58,7 +58,7 @@ const Gallery = () => {
   };
   return (
     <section>
-        <PageHeading title="Gallery" backgroundImage=''/>
+        <PageHeading title="Gallery" backgroundImage={Banner}/>
       <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 py-20 max-w-screen-xl m-auto">
         {data.map((item, index) => (
           <div

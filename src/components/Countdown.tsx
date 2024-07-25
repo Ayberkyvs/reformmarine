@@ -54,7 +54,7 @@ export default function Countdown({ children, startTime, endTime }: CountdownPro
     return (
         <section className='bg-gray-100'>
             <PageHeading title='We are coming soon!' backgroundImage='https://images.pexels.com/photos/1544372/pexels-photo-1544372.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'/>
-            <div className='flex justify-between max-w-screen-xl w-full h-full m-auto py-20'>
+            <div className='flex justify-evenly lg:justify-between max-w-screen-xl w-full h-full m-auto py-20 flex-wrap'>
             {Object.entries(timeRemaining).map(([unit, value]) => (
                 <div key={unit} className="flex flex-col justify-center items-center bg-white w-[120px] h-[120px] md:w-[180px] md:h-[180px] lg:w-[250px] lg:h-[250px] gap-2 rounded-xl shadow-md m-2">
                     <div className="text-3xl md:text-5xl lg:text-7xl font-bold text-blue-500">{value}</div>

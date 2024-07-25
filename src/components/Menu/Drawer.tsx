@@ -1,5 +1,6 @@
+import React from "react"
 import { Button, Drawer } from 'antd';
-import { useState } from 'react'
+import { useState, cloneElement, ReactElement } from 'react';
 
 export default function DrawerComponent({title="Menu", btnTitle, btnType="primary", btnClassName, children}: 
     {
@@ -20,13 +21,20 @@ export default function DrawerComponent({title="Menu", btnTitle, btnType="primar
         setOpen(false);
     };
 
+    const childrenWithProps = React.Children.map(children, child => {
+        if (React.isValidElement(child)) {
+            return cloneElement(child as ReactElement, { onClose });
+        }
+        return child;
+    });
+
     return (
         <>
         <Button type={btnType} onClick={showDrawer} className={btnClassName}>
             {btnTitle}
         </Button>
         <Drawer title={title} onClose={onClose} open={open}>
-            {children}
+            {childrenWithProps}
         </Drawer>
         </>
     );

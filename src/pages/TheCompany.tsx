@@ -1,6 +1,6 @@
 import PageHeading from '../components/PageHeading'
 import AboutUs from '../components/AboutUs'
-import Banner from "../assets/banners/company.jpg"
+import Banner from "../assets/banners/company.webp"
 function TheCompany() {
   return (
     <section>

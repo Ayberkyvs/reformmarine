@@ -59,7 +59,7 @@ const Gallery = () => {
   return (
     <section>
         <PageHeading title="Gallery" backgroundImage={Banner}/>
-      <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 py-20 max-w-screen-xl m-auto">
+      <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 py-20 max-w-screen-xl m-auto px-4">
         {data.map((item, index) => (
           <div
             key={index}

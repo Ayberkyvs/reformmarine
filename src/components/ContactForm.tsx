@@ -9,7 +9,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 
 const { TextArea } = Input;
 
-export default function ContactUs() {
+export default function ContactUs({isWithBanner = true}: {isWithBanner?: boolean}) {
     const [loading, setLoading] = useState(false);
 
     const onFinish = (values: any) => {
@@ -40,9 +40,9 @@ export default function ContactUs() {
     const [form] = Form.useForm();
     return (
         <div className="flex w-full min-h-screen h-fit mt-[50px]">
-            <LazyLoadImage src={ContactUsPhoto} alt="Contact Us Photo" className="hidden lg:flex w-1/2 h-full object-cover"/>
-            <div className="w-full lg:w-1/2 h-full flex flex-col justify-center items-center p-8">
-                <div className="w-full h-full max-w-[620px]">
+            {isWithBanner ? <LazyLoadImage src={ContactUsPhoto} alt="Contact Us Photo" className="hidden lg:flex w-1/2 h-full object-cover"/> : null}
+            <div className={`w-full ${isWithBanner ? "lg:w-1/2": ""} h-full flex flex-col justify-center items-center p-4`}>
+                <div className={`w-full h-full ${isWithBanner ? "max-w-[620px]" : "max-w-screen-xl"}`}>
                     <SectionHeading title="Leave us a few words" subtitle="Contact Us" align="right" className="w-full items-end"/>
                     <Form
                         form={form}

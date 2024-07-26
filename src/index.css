@@ -11,7 +11,13 @@ html {
   margin: 0px;
   padding: 0px;
 }
-
+.hero--vector {
+  background-image: url("./assets/vector-1.png");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-feature-settings: 'clig' off, 'liga' off;
+}
 .home {
  background-image: url("./assets/backgrounds/hero-background.webp");
  background-size: cover;

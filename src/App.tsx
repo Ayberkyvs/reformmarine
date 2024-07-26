@@ -3,6 +3,8 @@ import { createHashRouter, Navigate, RouterProvider } from "react-router-dom";
 import { ConfigProvider } from 'antd';
 import './App.css';
 import Loader from './components/Loader';
+import Electrical from './pages/Electrical';
+import Mechanical from './pages/Mechanical';
 
 const MainLayout = lazy(() => import("./layouts/MainLayout"));
 const Countdown = lazy(() => import('./components/Countdown'));
@@ -33,6 +35,14 @@ export default function App() {
         {
           path: "products",
           element: <Products />
+        },
+        {
+          path: "electrical",
+          element: <Electrical />
+        },
+        {
+          path: "mechanical",
+          element: <Mechanical />
         },
         {
           path: "company",

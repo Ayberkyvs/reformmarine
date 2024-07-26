@@ -1,7 +1,7 @@
 import { Menu, MenuProps } from "antd";
 import { Link } from "react-router-dom";
 import Socials from '../Socials'; // Ensure you have your Socials component
-
+import Logo from "../../../public/logo-short-white.png"
 type MenuItem = Required<MenuProps>['items'][number];
 
 const items: MenuItem[] = [
@@ -37,7 +37,7 @@ const Footer = () => (
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
                 <div className="flex items-center justify-center lg:justify-start mb-6 lg:mb-0">
                     <img
-                        src="https://reformmarine.com/logo-short-white.png"
+                        src={Logo}
                         alt="Reform Marine Logo"
                         className="mx-auto lg:mx-0 max-w-[60px] lg:max-w-[70px]"
                     />

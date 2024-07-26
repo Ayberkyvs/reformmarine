@@ -1,5 +1,5 @@
 import AboutUs from "../components/AboutUs";
-import ContactUs from "../components/ContactUs";
+import ContactUs from "../components/ContactForm";
 import Hero from "../components/Hero/Hero";
 import Services from "../components/Services";
 import Skills from "../components/Skills";
@@ -10,7 +10,7 @@ export default function Home() {
       <Hero />
       <Skills />
       <Services />
-      <AboutUs className="mt-[200px]"/>
+      <AboutUs className="mt-[200px]" />
       <ContactUs />
     </div>
   )

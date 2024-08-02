@@ -111,7 +111,7 @@ export default function ContactUs({isWithBanner = true}: {isWithBanner?: boolean
                                     rules={[{ required: true, message: 'Please select subject!'}]}
                                 >
                                     <Select
-                                        defaultValue="Products"
+                                        placeholder="Select a subject"
                                         allowClear
                                         options={[
                                             { value: 'Products', label: 'Products'}, 
@@ -128,7 +128,7 @@ export default function ContactUs({isWithBanner = true}: {isWithBanner?: boolean
                         <Form.Item
                             label="Message"
                             name="message"
-                            rules={[{ required: true, message: 'Your message must be at least 100 characters.!', min: 100}]}
+                            rules={[{ required: true, message: 'Your message must be at least 25 characters.!', min: 25}]}
                             hasFeedback
                             style={{ marginBottom: '20px' }}
                         >

@@ -8,11 +8,11 @@ interface HeroHeadingProps {
 
 const HeroHeading: React.FC<HeroHeadingProps> = ({ title, description }) => {
   return (
-    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-left z-10 mt-10">
+    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-left z-10">
       <h1 className="text-3xl lg:text-4xl font-bold text-white">
         {title}
       </h1>
-      <p className="text-sm lg:text-base mt-8 text-white/80 leading-[1.5]">
+      <p className="hidden lg:flex text-sm lg:text-base mt-8 text-white/80 leading-[1.5]">
         {description}
       </p>
     </div>
@@ -36,7 +36,7 @@ const description = `Reform Marine offers customized solutions to the maritime i
 export default function Hero() {
   return (
     <div className="w-full h-[90vh] relative">
-      <Carousel arrows dotPosition="left" infinite={false} vertical>
+      <Carousel arrows dotPosition="left" infinite={true} vertical autoplay>
         <div className="relative">
           <HeroHeading title={<>Your Reliable <br /> <span className="hero--vector px-2">Partner</span> In Maritime</>} description={description}/>
           <img

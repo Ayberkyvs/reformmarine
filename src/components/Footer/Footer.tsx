@@ -1,35 +1,6 @@
-import { Menu, MenuProps } from "antd";
-import { Link } from "react-router-dom";
 import Socials from '../Socials'; // Ensure you have your Socials component
 import Logo from "../../../public/logo-short-white.png"
-type MenuItem = Required<MenuProps>['items'][number];
-
-const items: MenuItem[] = [
-    { key: '1', label: <Link to="/" className="font-semibold">Home</Link> },
-    { type: 'divider' },
-    { key: '2', label: <Link to="/products" className="font-semibold">Products</Link> },
-    { type: 'divider' },
-    {
-        key: 'menu2',
-        label: <span className="font-semibold">Services</span>,
-        children: [
-            { key: '4', label: <Link to="/electrical">Electrical Service</Link> },
-            { key: '5', label: <Link to="/mechanical">Mechanical Service</Link> },
-            { key: '6', label: <Link to="/spareparts">Spare Parts</Link> },
-        ],
-    },
-    { type: 'divider' },
-    {
-        key: 'menu1',
-        label: <span className="font-semibold">About Us</span>,
-        children: [
-            { key: '7', label: <Link to="/company">The Company</Link> },
-            { key: '8', label: <Link to="/gallery">Gallery</Link> },
-        ],
-    },
-    { type: 'divider' },
-    { key: '8', label: <Link to="/contactus" className="font-semibold">Contact Us</Link> },
-];
+import MenuAuto from "../Menu/MenuAuto";
 
 const Footer = () => (
     <footer className="bg-blue-900 text-white pt-10">
@@ -43,9 +14,8 @@ const Footer = () => (
                     />
                 </div>
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-center lg:w-full mb-6 lg:mb-0">
-                    <Menu
+                    <MenuAuto
                         mode="horizontal"
-                        items={items}
                         theme="dark"
                         className="bg-transparent text-white justify-center lg:justify-end lg:w-full"
                     />

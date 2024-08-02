@@ -54,7 +54,7 @@ const tabs = [
         <DummyContent title="Mechanical Service" description="Lorem ipsum dolor sit amet consectetur. Imperdiet sollicitudin gravida tincidunt elit sed elit netus orci accumsan. Habitasse pretium viverra nullam turpis. A nunc aenean 
         pellentesque sed ac eu nulla elementum nibh. Bibendum eget at urna erat. Vel 
         vitae facilisis varius posuere viverra egestas risus eu. Tellus turpis purus 
-        faucibus semper amet amet. In id." calltoaction="/Mechanical" image={Image3}/>
+        faucibus semper amet amet. In id." calltoaction="/mechanical" image={Image3}/>
       </div>
     ),
   },

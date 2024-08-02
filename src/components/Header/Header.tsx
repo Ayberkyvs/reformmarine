@@ -58,12 +58,12 @@ export default function Header() {
           <div className="w-fit max-w-[800px] h-fit">
             <Show>
               <div className="flex justify-center items-center w-full">
-                <MenuAuto mode="horizontal" theme={mode} />
+                <MenuAuto mode="horizontal" theme={mode} callToAction/>
               </div>
             </Show>
             <Hide>
               <DrawerComponent btnTitle={<IoMdMenu className="w-6 h-6"/>} btnType="link" btnClassName={`${mode === "light" ? "text-primary" : "text-white"}`}>
-                <MenuAuto mode="inline" theme={mode} />
+                <MenuAuto mode="inline" theme={mode}/>
               </DrawerComponent>
             </Hide>
           </div>

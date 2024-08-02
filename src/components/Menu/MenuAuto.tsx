@@ -16,7 +16,23 @@ const items: MenuItem[] = [
       key: 'menu1',
       label: <span className="font-semibold">Services</span>,
       children: [
-        { key: 'electrical', label: <Link to="electrical">Electrical Service</Link>},
+        { key: 'electrical', label: <Link to="electrical">Electrical Service</Link>,       
+          children: [
+            { key: 'tank-radar-system', label: <Link to="electrical/tank-radar-system">Tank Radar System</Link>},
+            { key: 'tank-level-gauging-system', label: <Link to="electrical/tank-level-gauging-system">Tank Level Gauging System</Link>},
+            { key: 'high-level-overfill-system', label: <Link to="electrical/high-level-overfill-system">High Level Overfill System</Link>},
+            { key: 'gas-detection-system', label: <Link to="electrical/gas-detection-system">Gas Detection System</Link>},
+            { key: 'gas-sampling-system', label: <Link to="electrical/gas-sampling-system">Gas Sampling System</Link>},
+            { key: 'fire-alarm-system', label: <Link to="electrical/fire-alarm-system">Fire Alarm System</Link>},
+            { key: 'navigation-lights-control-panel', label: <Link to="electrical/navigation-lights-control-panel">Navigation Lights Control Panel</Link>},
+            { key: 'water-ingress-alarm-system', label: <Link to="electrical/water-ingress-alarm-system">Water Ingress Alarm System</Link>},
+            { key: 'remote-controlled-valve-systems', label: <Link to="electrical/remote-controlled-valve-systems">Remote Controlled Valve Systems</Link>},
+            { key: 'oil-discharge-monitoring-system', label: <Link to="electrical/oil-discharge-monitoring-system">Oil Discharge Monitoring System</Link>},
+            { key: 'ullage-temperature-interface', label: <Link to="electrical/ullage-temperature-interface">Ullage Temperature Interface</Link>},
+            { key: 'oily-water-seperator', label: <Link to="electrical/oily-water-seperator">Oily Water Seperator</Link>},
+            { key: 'flowmeters', label: <Link to="electrical/flowmeters">Flowmeters</Link>},
+          ],
+      },
         { key: 'mechanical', label: <Link to="mechanical">Mechanical Service</Link>},
         { key: 'spareparts', label: <Link to="spareparts">Spare Parts</Link>},
       ],
@@ -38,7 +54,7 @@ const items: MenuItem[] = [
     { key: 'contact', label: <Link to="contact" className="font-semibold">Contact Us</Link>},
   ];
 
-function MenuAuto({mode="inline", theme="light", onClose}: {mode:any, theme: MenuTheme, onClose?: any}) {
+function MenuAuto({mode="inline", theme="light", onClose, className, callToAction}: {mode:any, theme: MenuTheme, onClose?: any, className?:string, callToAction?:boolean}) {
     const location = useLocation();
     const pathSnippets = (location.pathname.split('/').filter(i => i).length > 0 ? location.pathname.split('/').filter(i => i) : ["home"]);
     if (mode == "horizontal") {
@@ -50,10 +66,11 @@ function MenuAuto({mode="inline", theme="light", onClose}: {mode:any, theme: Men
               defaultSelectedKeys={["home"]}
               mode={mode}
               items={items}
-              disabledOverflow={true}
+              // disabledOverflow={true}
               theme={theme}
+              className={className}
           />
-          <Button type={theme === "light" ? "primary" : "default"} className="text-sm lg:text-base p-4 ml-2 font-semibold rounded-md">Get a quote</Button>
+          {callToAction ? <Link to="contact"><Button type={theme === "light" ? "primary" : "default"} className="text-sm lg:text-base p-4 ml-2 font-semibold">Get a quote</Button></Link> : null}
           </>
         )
     }

@@ -4,13 +4,13 @@ import ContentGrid from '../components/ContentGrid'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import mainVisualContent from "../assets/electrical/mainVisualContent.jpg"
 import visualContent from "../assets/electrical/visualContent.jpeg" 
-function Electrical() {
+function Spare() {
 return (
     <section>
-        <PageHeading title='Electrical Service' backgroundImage={Banner} backgroundPosition='bottom' />
+        <PageHeading title='Spare Parts' backgroundImage={Banner} backgroundPosition='bottom' />
         <ContentGrid 
-        subtitle='Electrical Service'
-        title='Our Electrical Service'
+        subtitle='Spare Parts'
+        title='Our Spare Parts'
         description={`Reform Marine offers customized solutions to the maritime industry as a company specialized in electrical systems maintenance and repair. 
         Our professional teams optimize the travel experience by improving the safety and performance of marine vessels with electrical maintenance services.`}
         mainVisualContent={<LazyLoadImage src={mainVisualContent} className='w-full h-[200px] rounded-xl object-cover '/>}
@@ -21,4 +21,4 @@ return (
 )
 }
 
-export default Electrical
+export default Spare

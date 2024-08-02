@@ -7,7 +7,7 @@ function TheCompany() {
   return (
     <section>
         <PageHeading title="The Company" backgroundImage={Banner} backgroundPosition='center'/>
-        <AboutUs detailed/>
+        <AboutUs />
     </section>
   )
 }

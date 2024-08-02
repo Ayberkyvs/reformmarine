@@ -6,9 +6,9 @@ const DynamicBreadcrumbs = ({className}: {className: string}) => {
   const location = useLocation();
   const pathSnippets = location.pathname.split('/').filter(i => i);
 
-  const capitalizeFirstLetter = (string: string) => {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  };
+  // const capitalizeFirstLetter = (string: string) => {
+  //   return string.charAt(0).toUpperCase() + string.slice(1);
+  // };
 
   const breadcrumbItems = [
     {
@@ -18,7 +18,7 @@ const DynamicBreadcrumbs = ({className}: {className: string}) => {
     ...pathSnippets.map((snippet, index) => {
       const url = `/${pathSnippets.slice(0, index + 1).join('/')}`;
       return {
-        title: <Link to={url}>{capitalizeFirstLetter(snippet)}</Link>,
+        title: <Link to={url} className='text-xs lg:text-base text-center'>{snippet}</Link>,
       };
     }),
   ];

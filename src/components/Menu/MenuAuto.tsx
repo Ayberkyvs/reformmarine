@@ -33,7 +33,20 @@ const items: MenuItem[] = [
             { key: 'flowmeters', label: <Link to="electrical/flowmeters">Flowmeters</Link>},
           ],
       },
-        { key: 'mechanical', label: <Link to="mechanical">Mechanical Service</Link>},
+        { key: 'mechanical', label: <Link to="mechanical">Mechanical Service</Link>, 
+          children: [
+            { key: 'main-engine-service', label: <Link to="mechanical/main-engine-service">Main Engine Service</Link>},
+            { key: 'diesel-generator-maintenance-service', label: <Link to="mechanical/diesel-generator-maintenance-service">Diesel Generator Maintenance & Service</Link>},
+            { key: 'alternator-service', label: <Link to="mechanical/alternator-service">Alternator Service</Link>},
+            { key: 'auxiliary-machinery-service', label: <Link to="mechanical/auxiliary-machinery-service">Auxiliary Machinery Service</Link>},
+            { key: 'ballast-water-treatment-system', label: <Link to="mechanical/ballast-water-treatment-system">Ballast Water Treatment System</Link>},
+            { key: 'exhaust-gas-scrubber', label: <Link to="mechanical/exhaust-gas-scrubber">Exhaust Gas Scrubber</Link>},
+            { key: 'air-compressor-overhaul', label: <Link to="mechanical/air-compressor-overhaul">Air Compressor Overhaul</Link>},
+            { key: 'aux-composite-boilers-maintenance', label: <Link to="mechanical/aux-composite-boilers-maintenance">Aux and Composite Boilers Maintenance</Link>},
+            { key: 'incinerator-maintenance-refactory', label: <Link to="mechanical/incinerator-maintenance-refactory">Incinerator Maintenance and Refactory</Link>},
+            { key: 'air-condition-refrigeration-maintenance', label: <Link to="mechanical/air-condition-refrigeration-maintenance">Air Condition and Refrigeration Systems Maintenance</Link>}
+          ]
+        },
         { key: 'spareparts', label: <Link to="spareparts">Spare Parts</Link>},
       ],
     },

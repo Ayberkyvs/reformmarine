@@ -29,7 +29,8 @@ jobs:
       - name: Push to build branch
         uses: s0/git-publish-subdir-action@develop
         with:
-          publish-branch: build
-          publish-dir: ./dist
+          REPO: ${{ github.repository }}
+          BRANCH: build
+          FOLDER: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

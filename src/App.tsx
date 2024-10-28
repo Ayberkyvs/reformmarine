@@ -249,7 +249,7 @@ export default function App() {
       children: [
         {
           path: "/",
-          element: <Countdown startTime={startTime} endTime={endTime}><h1>asdasd</h1><Home /></Countdown>,
+          element: <Countdown startTime={startTime} endTime={endTime}><Home /></Countdown>,
         },
         {
           path: "/home",

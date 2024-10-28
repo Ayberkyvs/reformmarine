@@ -53,6 +53,7 @@ export default function ContactUs({isWithBanner = true}: {isWithBanner?: boolean
                         layout="vertical"
                         scrollToFirstError
                         className="w-full mt-[96px]"
+                        autoComplete="on"
                     >
                         <Row gutter={16}>
                             <Col span={12}>

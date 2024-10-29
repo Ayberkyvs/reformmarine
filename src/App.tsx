@@ -2,9 +2,9 @@ import { Suspense, lazy } from 'react';
 import { createHashRouter, Navigate, RouterProvider } from "react-router-dom";
 import { ConfigProvider } from 'antd';
 import './App.css';
-import Loader from './components/Loader';
-import ServicesLayout from './layouts/ServicesLayout';
 
+const ServicesLayout = lazy(() => import("./layouts/ServicesLayout"));
+const Loader = lazy(() => import("./components/Loader"));
 const MainLayout = lazy(() => import("./layouts/MainLayout"));
 const Countdown = lazy(() => import('./components/Countdown'));
 const Home = lazy(() => import('./pages/Home'));
@@ -14,13 +14,13 @@ const TheCompany = lazy(() => import('./pages/TheCompany'));
 const Gallery = lazy(() => import('./pages/Gallery'));
 const ContactUs = lazy(() => import('./pages/ContactUs'));
 const Spare = lazy(() => import('./pages/Spare'));
+const ContentPage = lazy(() => import('./components/ContentPage'));
 
 const startTime = '2024-07-01T15:27:00'; // Başlangıç tarihi
 const endTime = '2024-08-05T15:27:00';
 
 import mainVisualContent from "./assets/electrical/mainVisualContent.jpg"
 import visualContent from "./assets/electrical/visualContent.jpeg" 
-import ContentPage from './components/ContentPage';
 
 const electricalRouteConfigs = [
   {

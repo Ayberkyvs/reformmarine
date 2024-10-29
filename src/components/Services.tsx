@@ -1,4 +1,3 @@
-"use client";
 import { Tabs } from "../components/ui/tabs";
 import Image1 from "../assets/banners/products.webp";
 import Image2 from "../assets/banners/electrical.webp";

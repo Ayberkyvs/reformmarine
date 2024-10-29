@@ -38,8 +38,8 @@ const Footer = () => (
                 </div>
             </div>
         </div>
-        <div className="pt-4 py-5 text-center bg-blue-800">
-            <p className="text-sm">Copyright © 2024 Reform Marine. All rights reserved.</p>
+        <div className="py-4 text-center bg-blue-800">
+            <p className="text-sm m-0">Copyright © 2024 Reform Marine. All rights reserved.</p>
         </div>
     </footer>
 );
